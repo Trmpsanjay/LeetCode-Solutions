@@ -1,0 +1,24 @@
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        
+        // bruteforce soln
+        // basically we have to check s is present in t in same sequence
+        //edge cases
+        // if s is null then return true
+        if(s.length()==0)
+            return true;
+            // if t is null then return false
+        if(t.length()==0)
+            return false;
+            // go to every cahrecter of t and search of every charecter of s
+        int i=0,j=0;
+        for(i=0;i<t.length() && j<s.length();i++){
+            if(s.charAt(j)==t.charAt(i))
+                j++;
+        }
+        if(j==s.length())
+            return true;
+        return false;
+        
+    }
+}
