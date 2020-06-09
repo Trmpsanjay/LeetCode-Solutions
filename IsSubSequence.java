@@ -16,6 +16,7 @@ class Solution {
             if(s.charAt(j)==t.charAt(i))
                 j++;
         }
+        // if j will be equal to s length that means every character is present so return true else return false
         if(j==s.length())
             return true;
         return false;
